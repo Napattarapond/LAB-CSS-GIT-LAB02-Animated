@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Animated Product Card</title>
+    <!-- Boxicons CSS -->
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="content">
+            <div class="expand">
+                <div class="logo">
+                    <img id="logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqF71d2jiXOotscgtDY34wfidUswcTzrHzhlKCFxn1KQYu21TTBfrkvt9sc8WwIDQ9&usqp=CAU" alt="">
+                </div>
+            </div>
+            <div class="icon">
+                <span class='bx bx-cart-alt'></span>
+            </div>
+        </div>
+        <div class="other">
+            <div class="image">
+                <img id="img-black" src="im/black cozy.png">
+                <img id="img-white" src="im/white cozy.png">
+                <img id="img-purple" src="im/pink cozy.png">
+            </div>
+            <div class="header ">Carlyn Cozy M</div>
+            <p>Modern design and quality craftsmanship ready for everyday use.Medium size perfect for various occasions.Available in multiple colors for different styles.Instantly experience beauty and quality. A must-have accessory for your unique fashion
+                statement! </p>
+            <div class="rating ">
+                <span class="bx bxs-star "></span>
+                <span class="bx bxs-star "></span>
+                <span class="bx bxs-star "></span>
+                <span class="bx bxs-star "></span>
+                <span class="bx bxs-star "></span>
+                <span class="bx bx-star "></span>
+            </div>
+            <div class="tab ">
+                <div class="color_tab ">
+                    <span>Color:</span>
+                    <div class="color black " id="color_black"></div>
+                    <div class="color purple " id="color_purple"></div>
+                    <div class="color white " id="color_white"></div>
+                </div>
+                <div class="price_tab ">
+                    <span>$40.00</span>
+                    <div class="end-price "><strike>$90.00</strike></div>
+                </div>
+            </div>
+            <div class="button ">
+                <a href="# ">BUY NOW</a>
+            </div>
+        </div>
+    </div>
+    <script>
+        let card = document.querySelector('.wrapper'),
+            color_black = document.querySelector('.black'),
+            color_purple = document.querySelector('.purple'),
+            color_white = document.querySelector('.white'),
+            img_black = document.querySelector('#img-black'),
+            img_white = document.querySelector('#img-white'),
+            img_purple = document.querySelector('#img-purple');
+
+        document.getElementById('color_black').onclick = () => {
+            img_black.classList.remove("hide");
+            img_white.classList.remove("show");
+            img_purple.classList.remove("show");
+            color_black.classList.add("active");
+            color_purple.classList.remove("active");
+            color_white.classList.remove("active");
+        }
+        document.getElementById('color_purple').onclick = () => {
+            img_purple.classList.add("show");
+            img_black.classList.add("hide");
+            img_white.classList.remove("show");
+            color_purple.classList.add("active");
+            color_black.classList.remove("active");
+            color_white.classList.remove("active");
+        }
+        document.getElementById('color_white').onclick = () => {
+            img_white.classList.add("show");
+            img_black.classList.add("hide");
+            img_purple.classList.remove("show");
+            color_white.classList.add("active");
+            color_purple.classList.remove("active");
+            color_black.classList.remove("active");
+        }
+    </script>
+</body>
+
+</html>

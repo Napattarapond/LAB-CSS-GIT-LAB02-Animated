@@ -1,0 +1,215 @@
+/* Poppins import Google font link */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #4d5bf9;
+}
+
+.content {
+    z-index: 5;
+}
+
+.wrapper {
+    width: 100%;
+    max-width: 400px;
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4);
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.wrapper .content .expand .logo {
+    width: 100px;
+    height: 100px;
+}
+
+.wrapper .content .expand .logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.wrapper .content .icon span {
+    font-size: 23px;
+}
+
+.wrapper .content .icon {
+    cursor: pointer;
+}
+
+.wrapper .content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.wrapper .other .image {
+    width: 300px;
+    height: 300px;
+    margin-bottom: -70px;
+    user-select: none;
+    pointer-events: none;
+    transition: all 0.2s ease;
+}
+
+.wrapper .other .image img {
+    width: 125%;
+    height: 100%;
+    object-fit: contain;
+    transform: rotate(18deg);
+    position: relative;
+    bottom: 80px;
+    transition: all 0.2s ease;
+    padding: 0px 30px;
+}
+
+.wrapper .other .header {
+    font-weight: 500;
+    font-size: 24px;
+    color: #161616;
+}
+
+.wrapper .other p {
+    font-size: 12px;
+    text-align: justify;
+    color: #333;
+    font-weight: 400;
+}
+
+.wrapper .other .rating {
+    margin-top: 5px;
+}
+
+.wrapper .other .rating span {
+    color: #4d5bf9;
+}
+
+.wrapper .other .tab {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.wrapper .other .tab .price_tab span {
+    font-size: 25px;
+    font-weight: 600;
+    color: #4d5bf9;
+    letter-spacing: 2px;
+}
+
+.wrapper .other .tab .price_tab {
+    text-align: center;
+}
+
+.wrapper .other .tab .price_tab .end-price {
+    font-size: 18px;
+    color: #4d5bf9;
+    font-weight: 400;
+    letter-spacing: 2px;
+}
+
+.wrapper .other .tab .color_tab {
+    display: flex;
+    align-items: center;
+}
+
+.wrapper .other .tab .color_tab .color {
+    width: 20px;
+    height: 20px;
+    background: #f2f2f2;
+    border-radius: 20px;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+.wrapper .other .tab .color_tab .color.black {
+    background: #222;
+}
+
+.wrapper .other .tab .color_tab .color.purple {
+    background: #c95fa6;
+}
+
+.wrapper .other .tab .color_tab .color.white {
+    background: #bfbfbf;
+}
+
+.wrapper .other .tab .color_tab span {
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.wrapper .other .button {
+    width: 100%;
+    padding: 8px;
+    background: #575fcf;
+    margin-top: 30px;
+    text-align: center;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.97, -0.21, 1, 1);
+}
+
+.wrapper .other .button:hover {
+    box-shadow: 0 0 0 2px #fff, 0 0 0 4px #575fcf;
+}
+
+.wrapper .other .button a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+
+/*  */
+
+.wrapper .other .image #img-black.hide {
+    opacity: 0;
+}
+
+.wrapper .other .image #img-white {
+    position: relative;
+    bottom: 400px;
+    opacity: 0;
+}
+
+.wrapper .other .image #img-white.show {
+    opacity: 1;
+}
+
+.wrapper .other .image #img-purple {
+    position: relative;
+    bottom: 700px;
+    opacity: 0;
+}
+
+.wrapper .other .image #img-purple.show {
+    opacity: 1;
+}
+
+
+/*  */
+
+.wrapper .other .tab .color_tab .color.black.active {
+    box-shadow: 0 0 0 2px #fff, 0 0 0 4px #222;
+}
+
+.wrapper .other .tab .color_tab .color.purple.active {
+    box-shadow: 0 0 0 2px #fff, 0 0 0 4px #575fcf;
+}
+
+.wrapper .other .tab .color_tab .color.white.active {
+    box-shadow: 0 0 0 2px #fff, 0 0 0 4px #bfbfbf;
+}
